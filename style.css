@@ -16,6 +16,28 @@ body {
     height: 20px !important;
 }
 
+.desktop-nav a {
+    color: #40196d;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.desktop-nav .join-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 18px !important;
+    border-radius: 4px;
+    background-color: #40196d;
+    color: #ffffff;
+}
+
+.desktop-nav .join-button:hover,
+.desktop-nav .join-button:focus-visible {
+    background-color: #2f1052;
+}
+
 .hero-section {
     min-height: 100vh;
     padding: 100px 24px 80px !important;
@@ -99,7 +121,7 @@ body {
     min-height: 52px;
     padding: 0 28px !important;
     border-radius: 4px;
-    background-color:#e0beee;
+    background-color: #e0beee;
     color: black;
     font-size: 1rem;
     font-weight: 700;
