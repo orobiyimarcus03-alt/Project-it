@@ -1,0 +1,121 @@
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body {
+    background-color: #FCF7F2 !important;
+}
+
+.navbar {
+    position: fixed;
+}
+
+.header-nav>div>img {
+    height: 20px !important;
+}
+
+.hero-section {
+    min-height: 100vh;
+    padding: 100px 24px 80px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.offcanvas-header>img {
+    height: 20px !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    width: 40px;
+    height: 40px;
+    padding: 10px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.navbar-toggler:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.kuda-menu-icon {
+    width: 20px;
+    height: 16px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kuda-menu-icon span {
+    width: 100%;
+    height: 2px;
+    display: block;
+    border-radius: 2px;
+    background: #40196d;
+}
+
+.hero-eyebrow {
+    color: #7a7773;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 18px !important;
+}
+
+.hero-section h1 {
+    max-width: 760px;
+    color: black;
+    font-size: clamp(2.75rem, 6vw, 5.25rem);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 28px !important;
+}
+
+.hero-description {
+    max-width: 560px;
+    color: #514d4a;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 32px !important;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px !important;
+    border-radius: 4px;
+    background-color:#e0beee;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.download-button:hover,
+.download-button:focus-visible {
+    background-color: #2f1052;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (min-width:768px) {
+    .hero-section {
+        padding-top: 94px !important;
+    }
+}
