@@ -164,6 +164,33 @@ body {
     z-index: 1;
 }
 
+.ticker {
+    width: 100% ;
+    overflow: hidden;
+    margin-top: 50px !important;
+}
+.ticker-obj{
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: move-side 15s linear infinite;
+
+}
+.ticker{
+    white-space: nowrap;
+    font-size: 15px;
+    margin-right: 50px;
+
+}
+
+@keyframes move-side {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
 @media (min-width:768px) {
     .hero-section {
         padding-top: 132px !important;
