@@ -49,11 +49,12 @@ body {
     padding: 0 25px !important;
     border: none;
     border-radius: 4px;
-    color: #40196d;
+    color: black;
     font-size: 0.8rem;
     font-weight: 700;
     text-decoration: none;
 }
+
 /* drop down for personal button */
 
 .account-switcher .dropdown-menu {
@@ -66,7 +67,7 @@ body {
 
 .account-switcher .dropdown-item {
     padding: 8px 14px !important;
-    color: #40196d;
+    color: black;
     font-size: 0.8rem;
     font-weight: 700;
 }
@@ -81,7 +82,7 @@ body {
 .account-button:hover,
 .account-button:focus-visible {
     background-color: #DFD8CD;
-    color: #ffffff;
+    color: black;
 }
 
 .desktop-nav a {
@@ -208,7 +209,7 @@ body {
 .video-section {
     /* Responsive video container. */
     position: relative;
-    width: 100%;
+    width: calc(100% - 24px);
     height: 500px;
     overflow: hidden;
     max-width: 700px;
@@ -245,8 +246,9 @@ body {
 
 .ticker {
     white-space: nowrap;
-    font-size: 15px;
+    font-size: 20px;
     margin-right: 50px;
+    color: ;
 
 }
 
@@ -274,5 +276,16 @@ body {
     /* Laptop screens and larger. */
     .account-switcher {
         display: flex;
+    }
+
+    .video-section {
+        max-width: 1800px;
+        height: 850px;
+    }
+
+    .ticker {
+        max-width: 700px;
+        margin: 30px auto 0 !important;
+        
     }
 }
