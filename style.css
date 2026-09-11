@@ -4,13 +4,9 @@
     margin: 0 !important;
     box-sizing: border-box !important;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: #FCF7F2 !important;
+    scroll-behavior: smooth;
 }
 
 .navbar {
