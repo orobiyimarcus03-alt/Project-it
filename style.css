@@ -1,4 +1,5 @@
 * {
+    /* Reset browser defaults and use predictable sizing. */
     padding: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
@@ -13,6 +14,7 @@ body {
 }
 
 .navbar {
+    /* Keep the navigation visible while the page scrolls. */
     position: fixed;
     top: 0;
     left: 0;
@@ -20,8 +22,66 @@ body {
     z-index: 10;
 }
 
-.header-nav>div>img {
+.header-nav img {
     height: 20px !important;
+}
+
+.brand-area {
+    /* Keep the logo and account switcher together. */
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.account-switcher {
+    /* Hidden on smaller screens; enabled in the laptop media query below. */
+    display: none;
+    align-items: center;
+    gap: 6px;
+    background-color: #F5EFE6;
+}
+
+.account-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 25px !important;
+    border: none;
+    border-radius: 4px;
+    color: #40196d;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+/* drop down for personal button */
+
+.account-switcher .dropdown-menu {
+    min-width: 150px;
+    padding: 6px 0 !important;
+    border: 1px solid #DFD8CD;
+    border-radius: 4px;
+    background-color: #FCF7F2;
+}
+
+.account-switcher .dropdown-item {
+    padding: 8px 14px !important;
+    color: #40196d;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.account-switcher .dropdown-item:hover,
+.account-switcher .dropdown-item:focus {
+    background-color: #DFD8CD;
+    color: #40196d;
+}
+
+.account-button.active,
+.account-button:hover,
+.account-button:focus-visible {
+    background-color: #DFD8CD;
+    color: #ffffff;
 }
 
 .desktop-nav a {
@@ -47,6 +107,7 @@ body {
 }
 
 .hero-section {
+    /* Main hero content. */
     min-height: auto;
     padding: 124px 24px 56px !important;
     display: flex;
@@ -144,19 +205,22 @@ body {
     transform: translateY(-2px);
 }
 
-.video-section{
+.video-section {
+    /* Responsive video container. */
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 500px;
     overflow: hidden;
     max-width: 700px;
     margin: 0 auto !important;
 }
-.video-section>video{
+
+.video-section>video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .content {
     position: absolute;
     top: 0;
@@ -165,18 +229,21 @@ body {
 }
 
 .ticker {
-    width: 100% ;
+    /* Prevent the moving text from creating horizontal page overflow. */
+    width: 100%;
     overflow: hidden;
     margin-top: 50px !important;
 }
-.ticker-obj{
+
+.ticker-obj {
     display: flex;
     gap: 15px;
     width: max-content;
     animation: move-side 15s linear infinite;
 
 }
-.ticker{
+
+.ticker {
     white-space: nowrap;
     font-size: 15px;
     margin-right: 50px;
@@ -187,12 +254,25 @@ body {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
 }
-@media (min-width:768px) {
+
+/* Responsive styles: keep all viewport-specific rules together. */
+@media (min-width: 768px) {
+
+    /* Tablet and medium-sized screens. */
     .hero-section {
         padding-top: 132px !important;
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* Laptop screens and larger. */
+    .account-switcher {
+        display: flex;
     }
 }

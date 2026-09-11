@@ -19,7 +19,23 @@
 <body>
     <nav class="navbar header-nav navbar-white bg-transparent fixed-top px-3 py-3 ">
         <div class="container-fluid">
-            <img src="asset/download.svg" alt="">
+            <div class="brand-area">
+                <img src="asset/download.svg" alt="Kuda">
+                <div class="account-switcher" aria-label="Account type">
+                    <!-- Rough personal account dropdown for now. -->
+                    <div class="dropdown">
+                        <button class="account-button active dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Personal
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Personal</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                        </ul>
+                    </div>
+                    <a class="account-button" href="#">Business</a>
+                </div>
+            </div>
             <div class="desktop-nav d-none d-lg-flex align-items-center gap-4 ms-auto">
                 <a href="#">Help</a>
                 <a href="#">Sign In</a>
