@@ -334,11 +334,8 @@ body {
 }
 
 .bout-customers h1 {
-    color: #40196d;
-    font-family: "Boldonse", sans-serif;
-    font-size: clamp(2rem, 8vw, 5.2rem);
-    line-height: 0.98;
-    letter-spacing: -0.03em;
+  color: #2f1052 !important;
+  font-weight: 900;
 }
 
 .customer-number {
@@ -359,7 +356,7 @@ body {
 }
 
 .customer-cta {
-    position: absolute;
+    position: fixed;
     right: 5%;
     bottom: 18px;
     left: 5%;
@@ -374,12 +371,6 @@ body {
     color: #ffffff;
     font-weight: 800;
     text-decoration: none;
-}
-
-.customer-cta span {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 0;
 }
 
 @keyframes customer-photo-in {
