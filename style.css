@@ -4,6 +4,7 @@
     margin: 0 !important;
     box-sizing: border-box !important;
 }
+
 body {
     background-color: #FCF7F2 !important;
     scroll-behavior: smooth;
@@ -258,6 +259,144 @@ body {
     }
 }
 
+
+
+/* Customer section: clipped portrait collage with centered Kuda-style copy. */
+.about-customers {
+    position: relative;
+    min-height: 760px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.images {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.images>img {
+    position: absolute;
+    width: clamp(118px, 26vw, 190px);
+    aspect-ratio: 0.72;
+    object-fit: cover;
+    border-radius: 0;
+    opacity: 0;
+    animation: customer-photo-in 700ms ease-out forwards;
+}
+
+.images>img:nth-child(1) {
+    top: 28px;
+    left: 5%;
+    animation-delay: 100ms;
+}
+
+.images>img:nth-child(2) {
+    top: 140px;
+    right: -8%;
+    animation-delay: 250ms;
+}
+
+.images>img:nth-child(3) {
+    right: -10%;
+    bottom: 72px;
+    animation-delay: 400ms;
+}
+
+.images>img:nth-child(4) {
+    bottom: -30px;
+    left: -8%;
+    animation-delay: 550ms;
+}
+
+.images>img:nth-child(5) {
+    display: none;
+}
+
+.bout-customers {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 20px !important;
+    text-align: center;
+}
+
+.customer-intro {
+    margin-bottom: 28px !important;
+    color: #202020;
+    font-size: clamp(1.1rem, 3vw, 1.45rem);
+    font-weight: 800;
+}
+
+.bout-customers h1 {
+    color: #40196d;
+    font-family: "Boldonse", sans-serif;
+    font-size: clamp(2rem, 8vw, 5.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+}
+
+.customer-number {
+    display: inline-block;
+    min-width: 1.1ch;
+}
+
+.customer-legal {
+    margin-top: 28px !important;
+    color: #827d7b;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    line-height: 2;
+}
+
+.customer-legal strong {
+    color: #40196d;
+    font-size: 1.25em;
+}
+
+.customer-cta {
+    position: absolute;
+    right: 5%;
+    bottom: 18px;
+    left: 5%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    padding: 0 18px !important;
+    border-radius: 4px;
+    background-color: #40196d;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.customer-cta span {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 0;
+}
+
+@keyframes customer-photo-in {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
 /* Responsive styles: keep all viewport-specific rules together. */
 @media (min-width: 768px) {
 
@@ -282,6 +421,6 @@ body {
     .ticker {
         max-width: 700px;
         margin: 30px auto 0 !important;
-        
+
     }
 }
