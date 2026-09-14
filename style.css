@@ -313,6 +313,9 @@ body {
 .images>img:nth-child(5) {
     display: none;
 }
+.images>img:nth-child(6) {
+    display: none;
+} 
 
 .bout-customers {
     position: absolute;
