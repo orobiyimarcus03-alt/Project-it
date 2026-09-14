@@ -82,6 +82,12 @@ body {
     color: black;
 }
 
+.desktop-nav {
+    background-color: #F5EFE6;
+    padding: 3px 18px !important;
+    border-radius: 5px;
+}
+
 .desktop-nav a {
     color: #40196d;
     font-size: 0.95rem;
@@ -93,7 +99,7 @@ body {
     display: inline-flex;
     align-items: center;
     min-height: 40px;
-    padding: 0 18px !important;
+    padding: 12px 18px !important;
     border-radius: 4px;
     background-color: #40196d;
     color: #ffffff;
@@ -278,8 +284,8 @@ body {
 
 .images>img {
     position: absolute;
-    width: clamp(118px, 26vw, 190px);
-    aspect-ratio: 0.72;
+    width: clamp(130px, 12.5vw, 192px);
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 0;
     opacity: 0;
@@ -287,35 +293,28 @@ body {
 }
 
 .images>img:nth-child(1) {
-    top: 28px;
-    left: 5%;
+    top: 0;
+    left: 20%;
     animation-delay: 100ms;
 }
 
 .images>img:nth-child(2) {
-    top: 140px;
-    right: -8%;
+    top: 132px;
+    right: 0;
     animation-delay: 250ms;
 }
 
 .images>img:nth-child(3) {
-    right: -10%;
-    bottom: 72px;
+    right: 15%;
+    bottom: 66px;
     animation-delay: 400ms;
 }
 
 .images>img:nth-child(4) {
-    bottom: -30px;
-    left: -8%;
+    bottom: -76px;
+    left: -28px;
     animation-delay: 550ms;
 }
-
-.images>img:nth-child(5) {
-    display: none;
-}
-.images>img:nth-child(6) {
-    display: none;
-} 
 
 .bout-customers {
     position: absolute;
@@ -337,8 +336,8 @@ body {
 }
 
 .bout-customers h1 {
-  color: #2f1052 !important;
-  font-weight: 900;
+    color: #2f1052 !important;
+    font-weight: 900;
 }
 
 .customer-number {
