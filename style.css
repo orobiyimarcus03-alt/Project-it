@@ -544,15 +544,40 @@ body {
 
 
 /* the center text */
-.center-text>h1{
-    color: black;
+.center-text {
+    width: min(100% - 32px, 760px);
+    margin: clamp(40px, 7vw, 96px) auto clamp(48px, 8vw, 112px) !important;
     text-align: center;
-    font-weight: 900; 
-    font-size: 30px;
-    line-height: 30px;
 }
-.center-text{
-    
+
+.center-text>h1 {
+    margin: 0 !important;
+    color: black;
+    font-weight: 900;
+    font-size: clamp(2rem, 6vw, 4.75rem);
+    line-height: 0.95;
+    letter-spacing: 0;
+}
+
+.center-text>p {
+    margin-top: clamp(18px, 3vw, 30px) !important;
+    color: black;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+}
+
+.center-text>p:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .center-text {
+        width: calc(100% - 24px);
+    }
+
+    .center-text>h1 {
+        font-size: clamp(1.8rem, 11vw, 2.4rem);
+    }
 }
 
 @keyframes customer-photo-in {
