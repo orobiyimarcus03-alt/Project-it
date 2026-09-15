@@ -62,7 +62,7 @@
 .slide-copy h2 {
     margin-bottom: 14px !important;
     color: #ffffff;
-    font-size: 34px;
+    font-size: 44px;
     line-height: 1;
     font-weight: 900;
     letter-spacing: 0;
@@ -539,6 +539,20 @@ body {
     color: #ffffff;
     font-weight: 800;
     text-decoration: none;
+}
+
+
+
+/* the center text */
+.center-text>h1{
+    color: black;
+    text-align: center;
+    font-weight: 900; 
+    font-size: 30px;
+    line-height: 30px;
+}
+.center-text{
+    
 }
 
 @keyframes customer-photo-in {
