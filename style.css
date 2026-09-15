@@ -1,3 +1,169 @@
+/* Main responsive stage for the background-image carousel. */
+.big-screen-slide {
+    position: relative;
+    width: calc(100% - 24px);
+    min-height: 780px;
+    margin: 32px 12px 0 !important;
+    overflow: hidden;
+    background: #06477d;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+/* Background panels fill the stage; the foreground content stays outside this carousel. */
+.big-screen-slide .carousel,
+.big-screen-slide .carousel-inner,
+.big-screen-slide .carousel-item {
+    position: absolute;
+    inset: 0;
+    min-height: 780px;
+}
+
+/* Keep each background image cropped cleanly across screen sizes. */
+.big-screen-slide .carousel-item {
+    padding: 0 !important;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Blue tint keeps the fixed white copy readable over every image. */
+.big-screen-slide .carousel-item::before {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    content: "";
+    background: rgba(3, 55, 99, 0.82);
+}
+
+/* The three backgrounds rotate automatically with Bootstrap's carousel. */
+.big-screen-slide .carousel-item:nth-child(1) {
+    background-image: url("./asset/imgi_58_NSI03079-1024x683.webp");
+}
+
+.big-screen-slide .carousel-item:nth-child(2) {
+    background-image: url("./asset/imgi_62_NSI00522-1024x683.webp");
+}
+
+.big-screen-slide .carousel-item:nth-child(3) {
+    background-image: url("./asset/imgi_66_NSI01733-1024x683.webp");
+}
+
+/* Fixed slide heading, description, and call-to-action. */
+.slide-copy {
+    position: relative;
+    z-index: 1;
+    padding-top: 64px !important;
+    width: calc(100% - 32px);
+    max-width: 280px;
+    margin: 0 auto 30px !important;
+    text-align: center;
+}
+
+.slide-copy h2 {
+    margin-bottom: 14px !important;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 0;
+}
+
+.slide-copy p {
+    margin-bottom: 17px !important;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.slide-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    min-height: 49px;
+    padding: 0 !important;
+    border-radius: 4px;
+    background: #eed3f8;
+    color: #24142e;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.slide-button:hover,
+.slide-button:focus-visible {
+    background: #ffffff;
+    color: #24142e;
+    transform: translateY(-2px);
+}
+
+/* Phone video remains fixed while only the background carousel changes. */
+.phone-frame {
+    position: relative;
+    width: min(208px, 72vw);
+    height: 433px;
+    margin: 0 auto !important;
+    padding: 11px 8px !important;
+    overflow: hidden;
+    border: 8px solid #b8c7d4;
+    border-radius: 24px;
+    background: #fcf7f2;
+}
+
+.phone-frame video,
+.phone-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    object-fit: cover;
+}
+
+/* Fixed numbered controls for switching the background image. */
+.slide-dots {
+    position: absolute;
+    right: 0;
+    bottom: 34px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.slide-dots button {
+    width: 42px;
+    height: 42px;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 50%;
+    background: #183e68;
+    color: #ffffff;
+}
+
+.slide-dots button::after {
+    content: attr(aria-label);
+    font-size: 0;
+}
+
+.slide-dots button:first-child::before {
+    content: "1";
+}
+
+.slide-dots button:nth-child(2)::before {
+    content: "2";
+}
+
+.slide-dots button:nth-child(3)::before {
+    content: "3";
+}
+
+.slide-dots button.active {
+    outline: 2px solid #d36be3;
+    outline-offset: -2px;
+}
+
 * {
     /* Reset browser defaults and use predictable sizing. */
     padding: 0 !important;
@@ -213,7 +379,7 @@ body {
     /* Responsive video container. */
     position: relative;
     width: calc(100% - 24px);
-    height: 500px;
+    height: clamp(360px, 70vh, 850px);
     overflow: hidden;
     max-width: 700px;
     margin: 0 auto !important;
@@ -294,18 +460,18 @@ body {
 
 .images>img:nth-child(1) {
     top: 0;
-    left: 20%;
+    left: 5%;
     animation-delay: 100ms;
 }
 
 .images>img:nth-child(2) {
-    top: 132px;
+    top: 130px;
     right: 0;
     animation-delay: 250ms;
 }
 
 .images>img:nth-child(3) {
-    right: 15%;
+    right: -5%;
     bottom: 66px;
     animation-delay: 400ms;
 }
@@ -397,11 +563,16 @@ body {
     .hero-section {
         padding-top: 132px !important;
     }
+
+    .big-screen-slide {
+        width: min(1120px, calc(100% - 48px));
+        margin: 56px auto 0 !important;
+    }
 }
 
 @media (min-width: 992px) {
 
-    /* Laptop screens and larger. */
+    /* Laptop screens and larger use a taller, raised background stage. */
     .account-switcher {
         display: flex;
     }
@@ -409,6 +580,21 @@ body {
     .video-section {
         max-width: 1800px;
         height: 850px;
+    }
+
+    .big-screen-slide {
+        min-height: 700px;
+        margin-top: 24px !important;
+    }
+
+    .big-screen-slide .carousel,
+    .big-screen-slide .carousel-inner,
+    .big-screen-slide .carousel-item {
+        min-height: 900px;
+    }
+
+    .big-screen-slide .carousel-item {
+        background-position: center top;
     }
 
     .ticker {
