@@ -583,14 +583,15 @@ body {
     }
 
     .big-screen-slide {
-        min-height: 700px;
+        width: min(1800px, calc(100% - 24px));
+        min-height: 850px;
         margin-top: 24px !important;
     }
 
     .big-screen-slide .carousel,
     .big-screen-slide .carousel-inner,
     .big-screen-slide .carousel-item {
-        min-height: 900px;
+        min-height: 850px;
     }
 
     .big-screen-slide .carousel-item {
