@@ -1,0 +1,1 @@
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".js--marquee-list-slider").forEach(e=>{new Splide(e,{type:"loop",drag:!1,arrows:!1,pagination:!1,autoWidth:!0,gap:24,pauseOnHover:!1,pauseOnFocus:!1,clones:12,autoScroll:{speed:.8,pauseOnHover:!1,pauseOnFocus:!1},mediaQuery:"min"}).mount(window.splide.Extensions)})})})()
