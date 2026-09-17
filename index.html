@@ -17,6 +17,72 @@
         rel="stylesheet">
 </head>
 
+
+
+<div id="site-header" class="site-header">
+    <span>This website is currently open.</span>
+    <button onclick="closeHeader()" aria-label="Close notification">×</button>
+</div>
+
+
+<!-- notification header-nav -->
+
+<style>
+    .site-header {
+        position: fixed;
+        inset: 0 0 auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 20px;
+        background: white;
+        color: black;
+        font: 500 16px/1.4 system-ui, sans-serif;
+        z-index: 1000;
+    }
+
+    .site-header button {
+        flex: 0 0 auto;
+        width: 36px;
+        height: 36px;
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+        color: inherit;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    .site-header button:hover,
+    .site-header button:focus-visible {
+        background:rgba(255, 255, 255, 0.16);
+    }
+
+    @media (max-width: 480px) {
+        .site-header {
+            align-items: flex-start;
+            padding: 10px 14px;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .site-header button {
+            width: 32px;
+            height: 32px;
+            font-size: 23px;
+        }
+    }
+</style>
+
+<script>
+    function closeHeader() {
+        document.getElementById("site-header").remove();
+    }
+</script>
+
+<!-- the stop -->
+
 <body>
     <!-- Main navigation: account switching, desktop links, and mobile menu. -->
     <nav class="navbar header-nav navbar-white bg-transparent fixed-top px-3 py-3 ">
